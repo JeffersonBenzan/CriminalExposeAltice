@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "245920614751",
+    "firebase_url": "https://criminalexposealtice.firebaseio.com",
+    "project_id": "criminalexposealtice",
+    "storage_bucket": "criminalexposealtice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245920614751:android:8ee75cbf03d09ade",
+        "android_client_info": {
+          "package_name": "com.jefferson.criminalexposealtice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245920614751-04hlae26r70vrh2kg2k3ehr7fkvcl8a1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jefferson.criminalexposealtice",
+            "certificate_hash": "9f77f2cac0f29ee11da06494306aae22e81612eb"
+          }
+        },
+        {
+          "client_id": "245920614751-a7kltsmvi719n5i6epu49v0i9hnt66ps.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "245920614751-a7kltsmvi719n5i6epu49v0i9hnt66ps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9dUFSk7UT1qEXOnPzwQaBYQWBW2pVns4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245920614751-a7kltsmvi719n5i6epu49v0i9hnt66ps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
