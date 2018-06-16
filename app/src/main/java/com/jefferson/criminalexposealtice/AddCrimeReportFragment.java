@@ -2,16 +2,21 @@ package com.jefferson.criminalexposealtice;
 
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import android.hardware.Camera;
 import com.google.firebase.storage.StorageReference;
 
 import static android.app.Activity.RESULT_OK;
@@ -23,9 +28,13 @@ import static android.app.Activity.RESULT_OK;
 public class AddCrimeReportFragment extends Fragment {
 
     public static final int GALLERY_INTENT =1;
+    public static final int REQUEST_IMAGE_CAPTURE = 1;
     Button next,change;
     ImageView imageView;
     Uri uri;
+    ImageButton imageButton;
+    private Bitmap Image;
+
     public AddCrimeReportFragment() {
         // Required empty public constructor
     }
@@ -39,6 +48,14 @@ public class AddCrimeReportFragment extends Fragment {
          next = view.findViewById(R.id.next_to_upload);
          change = view.findViewById(R.id.change_photo);
          imageView = view.findViewById(R.id.image_to_upload);
+         imageButton = view.findViewById(R.id.btn_camera);
+
+         imageButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 dispatchTakePictureIntent();
+             }
+         });
 
          Intent intent = new Intent(Intent.ACTION_PICK);
          intent.setType("image/*");
@@ -67,12 +84,22 @@ public class AddCrimeReportFragment extends Fragment {
          });
          return view;
     }
+    private void dispatchTakePictureIntent() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
+    }
+
 
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode==GALLERY_INTENT && resultCode == RESULT_OK){
+            uri = data.getData();
+            imageView.setImageURI(uri);
+        }else if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             uri = data.getData();
             imageView.setImageURI(uri);
         }

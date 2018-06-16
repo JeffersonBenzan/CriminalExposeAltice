@@ -26,6 +26,11 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnSignup, btnLogin, btnReset;
 
     @Override
+    public void onBackPressed() {
+        finish();
+    }
+
+    @Override
     protected void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -41,11 +46,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-        // set the view now
+
         setContentView(R.layout.activity_login);
 
-//        Toolbar toolbar =  findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+
 
         inputEmail = findViewById(R.id.email);
         inputPassword = findViewById(R.id.password);

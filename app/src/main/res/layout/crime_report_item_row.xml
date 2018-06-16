@@ -18,15 +18,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textColor="#000"
+            <LinearLayout
+                android:id="@+id/encabezado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:text="LOCATION: "
+                    android:layout_height="wrap_content" />
+                <TextView
 
-                android:textAlignment="center"
-                android:textSize="18dp" />
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ksdjgksjdgkjsdgkjsjdg"
+                    android:textColor="#000"
+
+
+                    android:textSize="18dp" />
+            </LinearLayout>
+
 
             <ImageView
                 android:id="@+id/thumbnail"
@@ -34,14 +46,14 @@
                 android:layout_marginHorizontal="@dimen/activity_horizontal_toolbar_margin"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/crime_image_height"
-                android:layout_below="@+id/location"
+                android:layout_below="@+id/encabezado"
                 android:clickable="true"
                 android:scaleType="fitXY" />
             <LinearLayout
                 android:id="@+id/redes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/thumbnail"
+                android:layout_below="@id/encabezado"
                 android:orientation="vertical">
 
                 <ImageButton
@@ -58,7 +70,7 @@
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/redes"
+                android:layout_below="@+id/thumbnail"
                 android:text="jajajaja kakakakakakkakakaka kakakakakaka kakakaka kakakakakkakaka kakakakkaka kakakakka kakak lfkajsf;jkgkjashgkjasdkjgsdjgsdgasdgasdgsadgsdgsdgsdgsdgsdgsdgsdgsdgsdgsdgsdgsg   sdgsdgsdgsdgsdgsdgsdgsdgsdgsg  sdgsdgsdgsdgsdgsdgsgg"
                 android:textColor="#111"
                 android:textSize="14dp" />

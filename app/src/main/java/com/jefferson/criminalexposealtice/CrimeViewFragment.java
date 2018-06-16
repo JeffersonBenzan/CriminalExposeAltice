@@ -2,6 +2,7 @@ package com.jefferson.criminalexposealtice;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,6 +33,7 @@ public class CrimeViewFragment extends Fragment {
     private ArrayList<CrimeReport> crimeReports = new ArrayList<>();
     private RecyclerView recyclerView;
     private CrimeReportAdapter mAdapter;
+    ImageButton btnShare;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myReportRef = database.getReference("Reports");
@@ -44,7 +47,7 @@ public class CrimeViewFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_crime_view, container, false);
+        final View view = inflater.inflate(R.layout.fragment_crime_view, container, false);
 
 
         recyclerView = view.findViewById(R.id.recycler_view);
