@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         System.out.print(currentUser);
         if (currentUser!=null){
-            startActivity(new Intent(LoginActivity.this,UserSettingActivity.class));
+            startActivity(new Intent(LoginActivity.this,MainActivity.class));
             finish();
         }
     }
@@ -44,15 +44,15 @@ public class LoginActivity extends AppCompatActivity {
         // set the view now
         setContentView(R.layout.activity_login);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        Toolbar toolbar =  findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
-        inputEmail = (EditText) findViewById(R.id.email);
-        inputPassword = (EditText) findViewById(R.id.password);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        btnSignup = (Button) findViewById(R.id.btn_signup);
-        btnLogin = (Button) findViewById(R.id.btn_login);
-        btnReset = (Button) findViewById(R.id.btn_reset_password);
+        inputEmail = findViewById(R.id.email);
+        inputPassword = findViewById(R.id.password);
+        progressBar = findViewById(R.id.progressBar);
+        btnSignup = findViewById(R.id.btn_signup);
+        btnLogin = findViewById(R.id.btn_login);
+        btnReset = findViewById(R.id.btn_reset_password);
 
         //Get Firebase auth instance
         mAuth = FirebaseAuth.getInstance();
@@ -106,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
                                     }
                                 } else {
-                                    Intent intent = new Intent(LoginActivity.this, UserSettingActivity.class);
+                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
