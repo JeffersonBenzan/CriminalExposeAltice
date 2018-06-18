@@ -144,4 +144,16 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_crime">Add Report</string>
+    <string name="title_add_crime">Add Report</string>
+    <string name="title_identity">Personal</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_personal">Personal</string>
+    <string name="hint_location">Location</string>
+    <string name="hint_description">Description</string>
+    <string name="btn_upload">Upload</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

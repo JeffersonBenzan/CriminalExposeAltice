@@ -7,4 +7,7 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="logo_w_h">150dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="card_margin">3dp</dimen>
+    <dimen name="crime_image_height">230dp</dimen>
+    <dimen name="image_view_upload_height">600dp</dimen>
 </resources>

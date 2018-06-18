@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadReportActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+
+
+
+                <EditText
+                    android:id="@+id/location_add"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:lines="3"
+                    android:hint="@string/hint_location"
+                    android:inputType="text"
+                    android:textColorHint="@android:color/darker_gray" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:isScrollContainer="true"
+                android:layout_marginTop="60dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/description_add"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="@string/hint_description"
+                    android:textColorHighlight="@android:color/darker_gray"
+                    android:inputType="textAutoCorrect"
+                    android:textColorHint="@android:color/darker_gray" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btn_upload"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:text="@string/btn_upload"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
